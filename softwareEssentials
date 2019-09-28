@@ -13,25 +13,24 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 # CHROME
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-# UPDATE
 sudo apt-get update 
 
 # SOFTWARE
-echo ---> SPOTIFY <---
-sudo apt-get install spotify-client
-echo ---> GOOGLE CHROME <---
+echo "-----> SPOTIFY <-----"
+sudo apt-get install spotify-client -y
+echo "-----> GOOGLE CHROME <-----"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-echo ---> VISUAL CODE <---
-sudo apt install code
-echo ---> VIM <---
-sudo apt install vim
-echo ---> HTOP <---
-sudo apt install htop
-echo ---> GIT <---
-sudo apt install git
+echo "-----> VISUAL CODE <-----"
+sudo apt install code -y
+echo "-----> VIM <-----"
+sudo apt install vim -y
+echo "-----> HTOP <-----"
+sudo apt install htop -y
+echo "-----> GIT <-----"
+sudo apt install git -y
 
 # SNAP
-echo ---> SNAP  <---
-sudo apt install snap
-echo ---> DISCORD <---
+echo "-----> SNAP <-----"
+sudo apt install snap -y
+echo "-----> DISCORD <-----"
 sudo snap install discord
