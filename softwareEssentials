@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# SPOTIFY
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# VISUAL STUDIO CODE
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+# CHROME
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+# UPDATE
+sudo apt-get update 
+
+# SOFTWARE
+echo ---> SPOTIFY <---
+sudo apt-get install spotify-client
+echo ---> GOOGLE CHROME <---
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+echo ---> VISUAL CODE <---
+sudo apt install code
+echo ---> VIM <---
+sudo apt install vim
+echo ---> HTOP <---
+sudo apt install htop
+echo ---> GIT <---
+sudo apt install git
+
+# SNAP
+echo ---> SNAP  <---
+sudo apt install snap
+echo ---> DISCORD <---
+sudo snap install discord
