@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# DESINTALAR VERSIONES VIEJAS DE DOCKER
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
-# DOCKER ENGINE - COMMUNITY
 sudo apt update
 
 sudo apt-get install \
@@ -25,4 +23,3 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 sudo docker run hello-world
-
