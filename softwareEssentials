@@ -16,21 +16,21 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt-get update 
 
 # SOFTWARE
-echo "-----> SPOTIFY <-----"
+echo -e "\n-----> SPOTIFY <-----\n"
 sudo apt-get install spotify-client -y
-echo "-----> GOOGLE CHROME <-----"
+echo -e "\n-----> GOOGLE CHROME <-----\n"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-echo "-----> VISUAL CODE <-----"
+echo -e "\n-----> VISUAL CODE <-----\n"
 sudo apt install code -y
-echo "-----> VIM <-----"
+echo -e "\n-----> VIM <-----\n"
 sudo apt install vim -y
-echo "-----> HTOP <-----"
+echo -e "\n-----> HTOP <-----\n"
 sudo apt install htop -y
-echo "-----> GIT <-----"
+echo -e "\n-----> GIT <-----\n"
 sudo apt install git -y
 
 # SNAP
-echo "-----> SNAP <-----"
+echo -e "\n-----> SNAP <-----\n"
 sudo apt install snap -y
-echo "-----> DISCORD <-----"
+echo -e "\n-----> DISCORD <-----\n"
 sudo snap install discord
