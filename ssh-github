@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # ----------------------------------------------------------------------------- #
 # Script Name:   github-ssh
 # Description:   This script let you create or use an actual ssh key for github

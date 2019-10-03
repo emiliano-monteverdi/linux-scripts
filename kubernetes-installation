@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# ----------------------------------------------------------------------------- #
+# Script Name:   kubernetes-installation
+# Description:   This script install kubectl and minikube from scratch
+# Written by:    Emiliano Monteverdi
+# ----------------------------------------------------------------------------- #
+
 # KUBECTL
 sudo apt-get update && sudo apt-get install -y apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -16,8 +22,8 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 
-echo "-----> test minikube  <-----"
+echo "-----> Test minikube  <-----"
 minikube start --vm-driver=none
 
-echo "-----> displays cluster info <-----"
+echo "-----> Displays cluster info <-----"
 kubectl cluster-info
