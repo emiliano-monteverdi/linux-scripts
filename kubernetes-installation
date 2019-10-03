@@ -12,18 +12,18 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 
-echo "-----> KUBERNETES <-----"
+echo -e "\n-----> KUBERNETES <-----\n"
 sudo apt-get install -y kubectl
 
 # MINIKUBE
-echo "-----> MINIKUBE <-----"
+echo -e "\n-----> MINIKUBE <-----\n"
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
   && chmod +x minikube
 sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 
-echo "-----> Test minikube  <-----"
+echo -e "\n-----> TEST MINIKUBE <-----\n"
 minikube start --vm-driver=none
 
-echo "-----> Displays cluster info <-----"
+echo -e "\n-----> DISPLAYS CLUSTER INFO <-----\n"
 kubectl cluster-info

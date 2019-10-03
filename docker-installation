@@ -6,7 +6,7 @@
 # Written by:    Emiliano Monteverdi
 # ----------------------------------------------------------------------------- #
 
-echo "---> Uninstall older versions of docker <---"
+echo -e "\n-----> UNINSTALL OLDER VERSIONS OF DOCKER <-----\n"
 sudo apt-get remove docker docker-engine docker.io containerd runc -y
 
 sudo apt update
@@ -18,7 +18,7 @@ sudo apt-get install \
     gnupg-agent \
     software-properties-common -y
 
-echo "---> Download docker <---"
+echo -e "\n-----> DOWNLOAD DOCKER <-----\n"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 sudo add-apt-repository \
@@ -28,8 +28,8 @@ sudo add-apt-repository \
 
 sudo apt-get update
 
-echo "---> Install docker <---"
+echo -e "\n-----> INSTALL DOCKER <-----\n"
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
-echo "---> Test docker installation <---"
+echo -e "\n-----> TEST DOCKER INSTALLATION <-----\n"
 sudo docker run hello-world
