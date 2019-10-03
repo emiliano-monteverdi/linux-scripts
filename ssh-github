@@ -1,11 +1,10 @@
 #!/bin/bash
-# ------------------------------------------------------------------------ #
-# Script Name:   Github-SSH
-# Description:   .
+# ----------------------------------------------------------------------------- #
+# Script Name:   github-ssh
+# Description:   This script let you create or use an actual ssh key for github
 # Written by:    Emiliano Monteverdi
-# ------------------------------------------------------------------------ #
+# ----------------------------------------------------------------------------- #
 
-echo "GitHub"
 if [ -f /home/$USER/.ssh/id_rsa ]; then
 
 	echo "---> Adding your SSH key to the ssh-agent <---"
@@ -28,3 +27,10 @@ sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
 echo "---> Proceed on https://github.com/settings/keys <---"
+
+read -rsp $'Press any key to continue...\n' -n1 key
+
+echo "---> Test your SSH connection <---"
+ssh -T git@github.com
+
+echo "---> Remember to clone your repos with the "Use SSH" option <---"
