@@ -41,3 +41,5 @@ echo -e "\n-----> SNAP <-----\n"
 sudo apt install snap -y
 echo -e "\n-----> DISCORD <-----\n"
 sudo snap install discord
+echo -e "\n-----> SLACK <-----\n"
+sudo snap install slack --classic

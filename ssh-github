@@ -8,30 +8,30 @@
 
 if [ -f /home/$USER/.ssh/id_rsa ]; then
 
-	echo "---> Adding your SSH key to the ssh-agent <---"
+	echo -e "\n---> Adding your SSH key to the ssh-agent <---\n"
 	eval "$(ssh-agent -s)"
 	ssh-add /home/$USER/.ssh/id_rsa
 else
 	
-	echo "---> Generating a new SSH key <---"
-	echo "Enter github email"
+	echo -e "\n---> Generating a new SSH key <---\n"
+	echo -e "\nEnter github email\n"
 	read email
 	ssh-keygen -t rsa -b 4096 -C "$a"
 	
-        echo "---> Adding your SSH key to the ssh-agent <---"
+        echo -e "\n---> Adding your SSH key to the ssh-agent <---\n"
         eval "$(ssh-agent -s)"
         ssh-add /home/$USER/.ssh/id_rsa
 fi
 
-echo "---> Copy the SSH key to clipboard <---"
+echo -e "\n---> Copy the SSH key to clipboard <---\n"
 sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 
-echo "---> Proceed on https://github.com/settings/keys <---"
+echo -e "\n---> Proceed on https://github.com/settings/keys <---\n"
 
-read -rsp $'Press any key to continue...\n' -n1 key
+read -rsp $'\nPress any key to continue...\n' -n1 key
 
-echo "---> Test your SSH connection <---"
+echo -e "\n---> Test your SSH connection <---\n"
 ssh -T git@github.com
 
-echo "---> Remember to clone your repos with the "Use SSH" option <---"
+echo -e "\n---> Remember to clone your repos with the "Use SSH" option <---\n"
