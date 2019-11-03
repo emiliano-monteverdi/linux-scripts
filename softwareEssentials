@@ -20,6 +20,10 @@ echo -e "\n-----> SPOTIFY <-----\n"
 sudo apt-get install spotify-client -y
 echo -e "\n-----> GOOGLE CHROME <-----\n"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+echo -e "\n-----> GNOME TWEAK TOOL <-----\n"
+sudo apt install gnome-tweak-tool
+echo -e "\n-----> UBUNTU RESTRICTED EXTRAS <-----\n"
+sudo apt install ubuntu-restricted-extras
 echo -e "\n-----> VISUAL CODE <-----\n"
 sudo apt install code -y
 echo -e "\n-----> VIM <-----\n"
@@ -28,6 +32,9 @@ echo -e "\n-----> HTOP <-----\n"
 sudo apt install htop -y
 echo -e "\n-----> GIT <-----\n"
 sudo apt install git -y
+echo -e "\n-----> OPENJDK 8 <-----\n"
+sudo apt install openjdk-8-jdk
+
 
 # SNAP
 echo -e "\n-----> SNAP <-----\n"
