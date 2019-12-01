@@ -47,3 +47,17 @@ echo -e "\n-----> DISCORD <-----\n"
 sudo snap install discord
 echo -e "\n-----> SLACK <-----\n"
 sudo snap install slack --classic
+
+# PURGE
+echo -e "\n-----> PURGE FIREFOX <-----\n"
+sudo apt purge thunderbird* -y
+echo -e "\n-----> PURGE THUNDERBIRD <-----\n"
+sudo apt purge firefox* -y
+echo -e "\n-----> PURGE RHYTHMBOX <-----\n"
+sudo apt purge rhythmbox* -y
+echo -e "\n-----> REMOVE AMAZON <-----\n"
+sudo rm /usr/share/applications/ubuntu-amazon-default.desktop
+sudo rm /usr/share/unity-webapps/userscripts/unity-webapps-amazon/Amazon.user.js
+sudo rm /usr/share/unity-webapps/userscripts/unity-webapps-amazon/manifest.json
+
+# BASHRC
