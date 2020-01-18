@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# ----------------------------------------------------------------------------- #
+# Script Name:   go-installation
+# Description:   This script install go from scratch
+# Written by:    Emiliano Monteverdi
+# ----------------------------------------------------------------------------- #
+
+cd
+
+echo -e "\n-----> GO <-----\n"
+
+wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz
+
+sudo tar -xvf go1.13.3.linux-amd64.tar.gz
+
+echo -e "\n-----> GOROOT: LOCATION WHERE GO PACKAGE IS INSTALLED <-----\n"
+echo "GOPATH=/home/$USER/go" 
+export GOROOT=/home/$USER/go
+
+mkdir -p /home/$USER/workplace/go
+
+echo -e "\n-----> GOPATH: LOCATION OF YOUR WORKING DIRECTORY <-----\n"
+echo "GOPATH=/home/$USER/workplace/go" 
+export GOPATH=/home/$USER/workplace/go
+
+# PATH: ACCESS GO BINARY SYSTEM WIDE
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+echo -e "\n-----> VERIFY INSTALLATION <-----\n"
+go version
+
+echo -e "\n-----> VERIFY ALL CONFIGURED ENVIRONMENT VARIABLES <-----\n"
+go env
+
+
+
+
