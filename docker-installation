@@ -6,6 +6,10 @@
 # Written by:    Emiliano Monteverdi
 # ----------------------------------------------------------------------------- #
 
+sudo apt update
+sudo apt upgrade -y
+cd
+
 echo -e "\n-----> UNINSTALL OLDER VERSIONS OF DOCKER <-----\n"
 sudo apt-get remove docker docker-engine docker.io containerd runc -y
 

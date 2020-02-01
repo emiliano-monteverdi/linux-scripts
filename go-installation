@@ -6,6 +6,8 @@
 # Written by:    Emiliano Monteverdi
 # ----------------------------------------------------------------------------- #
 
+sudo apt update
+sudo apt upgrade -y
 cd
 
 echo -e "\n-----> GO <-----\n"
@@ -32,7 +34,3 @@ go version
 
 echo -e "\n-----> VERIFY ALL CONFIGURED ENVIRONMENT VARIABLES <-----\n"
 go env
-
-
-
-
