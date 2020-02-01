@@ -1,0 +1,36 @@
+# ----------------------------------------------------------------------------- #
+# Script Name:   mysql-installation
+# Description:   This script install mysql from scratch
+# Written by:    Emiliano Monteverdi
+# ----------------------------------------------------------------------------- #
+
+sudo apt update
+sudo apt upgrade -y
+cd
+
+echo -e "\n-----> MYSQL <-----\n"
+sudo apt-get install mysql-server
+
+echo -e "\n-----> MYSQL VERSION <-----\n"
+mysql --version
+
+echo -e "\n-----> MYSQL SERVICE <-----\n"
+sudo systemctl status mysql.service
+
+echo -e "\n-----> MYSQL SECURE INSTALLATION <-----\n"
+echo -e "\nANSWER EVERYTHING AS FOLLOWED"
+echo -e "\nPress y|Y for Yes, any other key for No: Y"
+echo -e "\nPlease enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1"
+echo -e "\nPlease set the password for root here."
+echo -e "\nRemove anonymous users? (Press y|Y for Yes, any other key for No) : y"
+echo -e "\nDisallow root login remotely? (Press y|Y for Yes, any other key for No) : Y"
+echo -e "\nRemove test database and access to it? (Press y|Y for Yes, any other key for No) : Y"
+echo -e "\nReload privilege tables now? (Press y|Y for Yes, any other key for No) : Y"
+sudo mysql_secure_installation
+
+echo -e "\n-----> IF YOU WANT TO USE MYSQL WORKBENCH, EXECUTE THIS QUERIES <-----\n"
+echo -e "\nCREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';"
+echo -e "\nGRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;"
+
+echo -e "\n-----> TEST USER CONNECTION <-----\n"
+sudo mysql -h localhost -u root -p
